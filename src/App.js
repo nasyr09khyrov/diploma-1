@@ -2,6 +2,10 @@
 import { Route, Routes } from "react-router"; 
 import Layout from "./components/Layout/layout";
 import Nav from "./components/Nav/Nav";
+import Home from "./components/pages/Home";
+import Contacts from "./components/pages/Contacts";
+
+
 function App() {
   return (
     <div className="App">
@@ -9,9 +13,9 @@ function App() {
         <Layout> 
           <Routes> 
             <Route path="/" element={<Home />} /> 
-            <Route path="/about" element={<h1>About</h1>} /> 
-            <Route path="/contacts" element={<h1>Contacts</h1>} /> 
-            <Route path="/delivery" element={<h1>Delivery</h1>} /> 
+            <Route path="/about" element={<About />} /> 
+            <Route path="/contacts" element={<Contacts />} /> 
+            <Route path="/delivery" element={<Delivery />} /> 
  
           </Routes> 
         </Layout> 
