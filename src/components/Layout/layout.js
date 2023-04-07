@@ -2,6 +2,7 @@ import Nav from "../Nav/Nav";
 import"./Layout.css";
 import Logo from "../logo/Logo";
 
+
 export default function Layout(props) {
     return (
         <div className="Layout">
