@@ -3,8 +3,18 @@ import { categories } from "../../firebase";
 
 export default function CategoryList() {
     getDocs(categories).then (snapshot => {
-        console.log(snapshot.docs);
+        const newCategoryList = [];
+        snapshot.docs.forEach(doc => {
+            const category = doc.data();
+            category.id = doc.id;
+
+            newCategoryList(nevCategoryList);
+
     });
+    
+
+      setCategoryList(newCategoryList);
+    }); 
 
 
     // const categories = [
