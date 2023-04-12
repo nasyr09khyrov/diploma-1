@@ -26,9 +26,9 @@ function App() {
           }))
         )
       });
-    getDocs(categoryCollection) // получить категории
+    getDocs(productsCollection) // получить категории
       .then(({ docs }) => { // когда категории загрузились
-        setCategories( // обновить состояние
+        setProducts( // обновить состояние
           docs.map(doc => ({ // новый массив
             ...doc.data(), // из свойств name, slug
             id: doc.id // и свойства id
