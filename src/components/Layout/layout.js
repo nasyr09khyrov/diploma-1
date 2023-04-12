@@ -1,6 +1,6 @@
 import CategoryList from "../CategoryList/CategoryList";
-import Logo from "../Logo/Logo";
 import Nav from "../Nav/Nav";
+import Logo from "../ui/Logo/Logo";
 import "./Layout.css";
 
 export default function Layout(props) {
