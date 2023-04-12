@@ -14,8 +14,10 @@ const firebaseConfig = {
   appId: "1:917616341572:web:72c356bb40833256290211"
 };
 
-// Initialize Firebase
+// Инициализация приложения
 const app = initializeApp(firebaseConfig);
+// Инициализация базы данных
 const db = getFirestore(app);
 
-export const categories = collection(db.categories);
+// Получение списка категорий (коллекции документов)
+export const categoryCollection = collection(db, 'categories');

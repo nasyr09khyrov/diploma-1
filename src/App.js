@@ -3,27 +3,29 @@ import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home";
 import Category from "./pages/Category";
 import NotFound from "./pages/NotFound";
-import { useEffect } from "react";
+import { createContext, useEffect } from "react";
+import { getDocs } from "firebase/firestore/lite";
+import { categoryCollection } from "./firebase";
+
+// Создать контекст, который будет хранить данные.
+export const AppContext = createContext({
+  categories: [],
+});
 
 function App() {
-  const [categories, serCategories] = useState([]);
+  const [categories, setCategories] = useState([]);
 
-  useEffect(() => {
-    return getDocs(categoryCollections)
-    .then((docs) => {
-        serCategories(
-          docs.map (doc => (
-            {
-            ...doc.data(),
-              id: doc.id
-            }
-          ))
-          );
-      })
+  useEffect(() => { // выполнить только однажды
+    getDocs(categoryCollection) // получить категории
+      .then(({ docs }) => { // когда категории загрузились
+        setCategories( // обновить состояние
+          docs.map(doc => ({ // новый массив
+            ...doc.data(), // из свойств name, slug
+            id: doc.id // и свойства id
+          }))
+        )
+      });
   }, []);
-
-
-
 
   return (
     <div className="App">
