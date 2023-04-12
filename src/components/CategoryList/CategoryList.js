@@ -1,6 +1,6 @@
 import { getDocs } from "firebase/firestore/lite";
 import { NavLink } from "react-router-dom";
-import { categories } from "../../firebase";
+import { categoryCollection } from "../../firebase";
 import { useEffect, useState } from "react";
 
 export default function CategoryList() {
@@ -8,7 +8,7 @@ export default function CategoryList() {
 
   // получить документы из списка категорий в Firebase.
   useEffect(() => {
-    getDocs(categories).then(snapshot => {
+    getDocs(categoryCollection).then(snapshot => {
       const newCategoryList = [];
       snapshot.docs.forEach(doc => {
         const category = doc.data(); // { name: "...", slug: "..." }
