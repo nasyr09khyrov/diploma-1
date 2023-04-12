@@ -14,8 +14,18 @@ export const AppContext = createContext({
 
 function App() {
   const [categories, setCategories] = useState([]);
+  const [products, setProducts] = useState([]);
 
   useEffect(() => { // выполнить только однажды
+    getDocs(categoryCollection) // получить категории
+      .then(({ docs }) => { // когда категории загрузились
+        setCategories( // обновить состояние
+          docs.map(doc => ({ // новый массив
+            ...doc.data(), // из свойств name, slug
+            id: doc.id // и свойства id
+          }))
+        )
+      });
     getDocs(categoryCollection) // получить категории
       .then(({ docs }) => { // когда категории загрузились
         setCategories( // обновить состояние
