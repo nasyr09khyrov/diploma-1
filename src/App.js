@@ -10,6 +10,7 @@ import { categoryCollection } from "./firebase";
 // Создать контекст, который будет хранить данные.
 export const AppContext = createContext({
   categories: [],
+  products: [],
 });
 
 function App() {
