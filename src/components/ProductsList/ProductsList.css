@@ -5,9 +5,12 @@
     max-width: 200px;
     border: 1px solid #000;
     box-shadow: 5px 3px 13px rgb(0, 0, 0);
-    margin: 10px;
+    margin: 0 auto;
 
 }
 .ProductList .Product img {
     width: 100%;
+}
+div.ProductList {
+    display: flex;
 }
