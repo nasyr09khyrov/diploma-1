@@ -1,7 +1,6 @@
 .Nav {
   background-color: white;
   padding-top: 20px;
-  border: 1px solid black;
 }
 .Nav .NavItem {
   list-style-type: none;
