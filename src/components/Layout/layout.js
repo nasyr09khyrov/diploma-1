@@ -2,6 +2,7 @@ import CategoryList from "../CategoryList/CategoryList";
 import Logo from "../ui/Logo/Logo"
 import Nav from "../Nav/Nav";
 import "./Layout.css";
+import CartLink from "../CartLink/CartLink";
 
 export default function Layout(props) {
   return (
@@ -9,6 +10,7 @@ export default function Layout(props) {
       <header>
         <Logo />
         <Nav />
+        <CartLink />
       </header>
       <aside>
         <CategoryList />
