@@ -13,14 +13,14 @@ export const AppContext = createContext({
   categories: [],
   products: [],
 
-  cart: [],
+  cart: {},
   setCart: () => {},
 });
 
 function App() {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState({});
 
   useEffect(() => { // выполнить только однажды
     getDocs(categoryCollection) // получить категории
