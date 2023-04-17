@@ -1,19 +1,91 @@
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+.Nav {
+  background-color: white;
+  padding-top: 20px;
+  border: 1px solid black;
+}
+.Nav .NavItem {
+  list-style-type: none;
+}
+.Nav .NavItem a {
+  font-weight: 600;
+  color: black;
+  transition: 0.3s;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 0 auto;
+  padding: 40px;
+}
+.NavItem a:hover {
+  color: aquamarine;
+}
+.NavItem a.active {
+  text-decoration: underline 3px red;
+}
+
+.Nav ul {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+/* ADAPTABILITY */
+@media (max-width: 655px) {
+  .Nav .NavItem a {
+    font-weight: 600;
+    color: black;
+    font-size: 20px;
+    margin: 0 auto;
+    padding: 25px;
   }
-  
-  li {
-    float: left;
+  .Layout header {
+    display: flex;
   }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  .NavItem a:hover {
+    color: aquamarine;
   }
+  .NavItem a.active {
+    text-decoration: underline red;
+  }
+}
+@media (max-width: 760px) {
+  .Layout header {
+    flex-direction: column;
+  }
+}
+@media (max-width: 535px) {
+  .Nav .NavItem a {
+    font-weight: 600;
+    color: black;
+    font-size: 18px;
+    margin: 0 auto;
+    padding: 1px;
+  }
+  .Layout header {
+    flex-direction: row;
+  }
+  .Nav ul {
+    flex-direction: column;
+  }
+  .NavItem a:hover {
+    color: aquamarine;
+  }
+  .NavItem a.active {
+    text-decoration: underline red;
+  }
+}
+@media (max-width: 424px) {
+  .Nav .NavItem a {
+    font-weight: 600;
+    color: black;
+    font-size: 18px;
+    margin: 0 auto;
+    padding: 1px;
+  }
+  .NavItem a:hover {
+    color: aquamarine;
+  }
+  .NavItem a.active {
+    text-decoration: underline red;
+  }
+}
