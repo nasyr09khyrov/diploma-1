@@ -12,6 +12,9 @@ import Products from "./pages/Products";
 export const AppContext = createContext({
   categories: [],
   products: [],
+
+  cart: [],
+  setCart: () => {},
 });
 
 function App() {
