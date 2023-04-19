@@ -5,9 +5,10 @@ import Category from "./pages/Category";
 import NotFound from "./pages/NotFound";
 import { createContext, useEffect, useState } from "react";
 import { getDocs } from "firebase/firestore/lite";
-import { categoryCollection, productsCollection } from "./firebase";
+import { categoryCollection, onAuthChange, productsCollection } from "./firebase";
 import Products from "./pages/Products";
 import Cart from "./pages/Cart";
+import ThankYou from "./pages/ThankYou";
 
 // Создать контекст, который будет хранить данные.
 export const AppContext = createContext({
@@ -16,12 +17,23 @@ export const AppContext = createContext({
 
   cart: {},
   setCart: () => {},
+
+  user: null,
 });
 
 function App() {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState({});
+
+  const [cart, setCart] = useState(() => {
+    return JSON.parse(localStorage.getItem('cart')) || {};
+  });
+
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
 
   useEffect(() => { // выполнить только однажды
     getDocs(categoryCollection) // получить категории
@@ -33,6 +45,7 @@ function App() {
           }))
         )
       });
+
     getDocs(productsCollection) // получить категории
       .then(({ docs }) => { // когда категории загрузились
         setProducts( // обновить состояние
@@ -42,28 +55,34 @@ function App() {
           }))
         )
       });
+
+    onAuthChange(user => {
+      setUser(user);
+    });
   }, []);
 
   return (
     <div className="App">
-      <AppContext.Provider value={{ categories, products, cart, setCart }}>
-       <Layout>
-         <Routes>
-           <Route path="/" element={<Home />} />
-           <Route path="/cart" element={<Cart />} />
-           <Route path="/about" element={<h1>About</h1>} />
-           <Route path="/contacts" element={<h1>Contacts</h1>} />
-           <Route path="/delivery" element={<h1>Delivery</h1>} />
-           <Route path="/categories/:slug" element={<Category />} />
-           <Route path="/products/:slug" element={<Products />} />
+      <AppContext.Provider
+        value={{ categories, products, cart, setCart, user }}
+      >
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/about" element={<h1>About</h1>} />
+            <Route path="/contacts" element={<h1>Contacts</h1>} />
+            <Route path="/delivery" element={<h1>Delivery</h1>} />
+            <Route path="/categories/:slug" element={<Category />} />
+            <Route path="/products/:slug" element={<Products />} />
+            <Route path="/thank-you" element={<ThankYou />} />
 
-           <Route path="*" element={<NotFound />} />
-         </Routes>
-       </Layout>
-       </AppContext.Provider>
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Layout>
+      </AppContext.Provider>
     </div>
   );
 }
 
 export default App;
-

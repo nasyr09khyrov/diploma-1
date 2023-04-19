@@ -1,5 +1,5 @@
 .Nav {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.658);
   padding-top: 20px;
 }
 .Nav .NavItem {
@@ -87,4 +87,13 @@
   .NavItem a.active {
     text-decoration: underline red;
   }
+}
+.Nav ul .NavItem {
+  display: inline-block;
+  padding: 12px;
+  /* Добавьте ниже свои пользовательские стили, чтобы изменить отображение ссылок */
+  color: #DAE1E7;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+
 }
