@@ -1,5 +1,5 @@
 .Nav {
-  background-color: rgba(255, 255, 255, 0.658);
+  background-color: white;
   padding-top: 20px;
 }
 .Nav .NavItem {
@@ -95,5 +95,4 @@
   color: #DAE1E7;
   text-decoration: none;
   letter-spacing: 0.05em;
-
 }

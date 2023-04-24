@@ -7,6 +7,7 @@ export default function Logo() {
     <div className="logo">
       <NavLink>
         <img src={logo} alt="logo" className="logo" />
+        <p className="logo-name">equipment</p>
       </NavLink>
     </div>
   );
