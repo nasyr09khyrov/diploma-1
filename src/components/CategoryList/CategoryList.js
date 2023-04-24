@@ -2,6 +2,7 @@ import { getDocs } from "firebase/firestore/lite";
 import { NavLink } from "react-router-dom";
 import { categoryCollection } from "../../firebase";
 import { useEffect, useState } from "react";
+import "./CategoryList.css";
 
 export default function CategoryList() {
   const [categoryList, setCategoryList] = useState([]);
