@@ -29,3 +29,23 @@
   .CategoryList li {
     margin: 12px 0 0 0px;
   }
+  .CategoryList a {
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    color: rgba(31, 30, 30, 0.64);
+    padding: 5px;
+    position: relative;
+    transition: 0.3s linear;
+  }
+  .CategoryList a:after {
+    font-family:Arial, Helvetica, sans-serif;
+    position: fixed;
+    right: 5px;
+    color: white;
+    transition: 0.2s linear;
+  }
+  .CategoryList a.active {
+    background: #b685ff;
+    color: #ffffff;
+  }
