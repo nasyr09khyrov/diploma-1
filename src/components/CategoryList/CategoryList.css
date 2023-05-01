@@ -1,24 +1,28 @@
 .CategoryList {
     padding: 15px;
-    background-image: url();
+    border-radius: 20px;
+    background-image: url(../../assets/FirstChair.jpg);
     box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
-    max-width: 250px;
+    max-width: 220px;
+    background-repeat: no-repeat;
+    background-position: 40%;
+    margin-left: 10px;
     
   }
   .CategoryList h3 {
-    font-size: 16px;
-    color: rgba(0, 0, 0, 0.6);
+    font-size: 26px;
+    color: rgb(170, 255, 1);
     margin: 0 0 10px;
     padding: 0 5px;
     position: relative;
   }
   .CategoryList h3:after {
     content: "";
-    width: 6px;
-    height: 6px;
+    width: 9px;
+    height: 7px;
     position: absolute;
-    right: 5px;
-    bottom: 2px;
+    right: 10px;
+    bottom: 10px;
    
   }
   .CategoryList ul {
@@ -35,19 +39,21 @@
     text-decoration: none;
     display: block;
     font-size: 26px;
-    color: rgba(31, 30, 30, 0.64);
+    color: rgba(255, 230, 0, 0.822);
     padding: 5px;
-    position: relative;
-    transition: 0.3s linear;
+    position: inherit;
+    transition: 0.5s ease-in;
   }
   .CategoryList a:after {
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     position: fixed;
     right: 5px;
     color: rgb(0, 0, 0);
-    transition: 0.2s linear;
+    transition: 0.3s step-start;
   }
   .CategoryList a.active {
-    background: #b685ff;
-    color: #ffffff;
+    background: #0ba3baaf;
+    color: #fff700;
+    opacity: 1;
+    border-radius: 30px;
   }
