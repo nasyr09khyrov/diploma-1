@@ -30,3 +30,11 @@ const provider = new GoogleAuthProvider();
 export const logIn = () => signInWithPopup(auth, provider);
 export const logOut = () => signOut(auth);
 export const onAuthChange = (callback) => onAuthStateChanged(auth, callback);
+
+export const uploadProductPhoto = async (file) => {
+  const storageRef = ref(storage, products/${file.name});
+  await uploadBytes(storageRef, file);
+
+  const url = await getDownloadURL(storageRef);
+  return url;
+};
