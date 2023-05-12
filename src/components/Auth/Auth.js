@@ -16,7 +16,7 @@ export default function Auth() {
       ) : (
         <span>
           Hello guest!
-          <button onClick={logIn}>Sign in</button>
+          <button className="logIn" onClick={logIn}>Sign in</button>
         </span>
       )}
     </div>

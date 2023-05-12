@@ -16,7 +16,7 @@ export default function Products() {
         <div className="Products">
             <h1>{product.name}</h1>
             <img src={product.picture} alt={product.name} />
-            <span>{product.price} dollar</span>
+            <span>{product.price} $</span>
         </div>
     )
 }

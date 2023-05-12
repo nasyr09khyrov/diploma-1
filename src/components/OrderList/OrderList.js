@@ -20,7 +20,7 @@ export default function OrderList() {
       return (
         <div key={productId}>
             <img src={product.picture} alt={product.name} />
-          {product.name}: {order.cart[productId]} X {product.price} dollar = {order.cart[productId] * product.price} dollar
+          {product.name}: {order.cart[productId]} X {product.price} $ = {order.cart[productId] * product.price} $
         </div>
       );
     })

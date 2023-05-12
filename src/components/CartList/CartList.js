@@ -35,7 +35,7 @@ export default function CartList() {
             <input type="number" value={cart[product.id]} min={1}
             onChange={(event) => onQuantityChange (product, +event.target.value)} />
 
-            <span>{cart [product.id] * product.price} dollar</span>
+            <span>{cart [product.id] * product.price} $</span>
             <button onClick={() => onItemRemove(product)}>Remove</button>
         </div>
     ));
