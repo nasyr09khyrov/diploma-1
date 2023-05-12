@@ -1,17 +1,22 @@
 .ProductList .Product {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     max-width: 200px;
     border: 1px solid #000;
     box-shadow: 5px 3px 13px rgb(0, 0, 0);
     margin: 0 auto;
     padding: 20px;
+    border-radius: 20px;
+    transition: transform 0.3s;
 
+}
+.ProductList .Product:hover {
+    transform: scale(1.1);
 }
 .ProductList .Product img {
     width: 100%;
 }
 div.ProductList {
     display: flex;
+    flex-wrap: wrap;
 }
