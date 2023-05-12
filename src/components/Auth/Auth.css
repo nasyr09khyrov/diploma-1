@@ -28,4 +28,12 @@
     border-radius: 50%;
     margin-right: 0.5rem;
   }
+  @media (max-width: 820px) {
+    .Auth span {
+      font-size: 12px;
+    }
+    .Auth .log {
+      font-size: 12px;
+    }
+  }
   
