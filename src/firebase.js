@@ -1,8 +1,14 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection } from 'firebase/firestore/lite'
-import { GoogleAuthProvider, getAuth, onAuthStateChanged, signInWithPopup, signOut } from 'firebase/auth';
-import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { getFirestore, collection, onSnapshot } from "firebase/firestore";
+import {
+  GoogleAuthProvider,
+  getAuth,
+  onAuthStateChanged,
+  signInWithPopup,
+  signOut,
+} from "firebase/auth";
+import { getStorage, ref, uploadBytes, getDownloadURL, getStream } from "firebase/storage";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -15,25 +21,53 @@ const firebaseConfig = {
   messagingSenderId: "917616341572",
   appId: "1:917616341572:web:72c356bb40833256290211"
 };
-
 // Инициализация приложения
 const app = initializeApp(firebaseConfig);
 // Инициализация базы данных
-const db = getFirestore(app);
+export const db = getFirestore(app);
 const auth = getAuth(app);
 export const storage = getStorage(app);
 
 // Получение списка категорий (коллекции документов)
-export const categoryCollection = collection(db, 'categories');
-export const productsCollection = collection(db, 'products');
-export const ordersCollection = collection(db, 'orders');
+export const categoryCollection = collection(db, "categories");
+export const productsCollection = collection(db, "products");
+export const ordersCollection = collection(db, "orders");
 
 const provider = new GoogleAuthProvider();
 export const logIn = () => signInWithPopup(auth, provider);
 export const logOut = () => signOut(auth);
 export const onAuthChange = (callback) => onAuthStateChanged(auth, callback);
-export const uploadProductPhoto = async (file) => {
 
+export const onCategoriesLoad = (callback) =>
+  onSnapshot(categoryCollection, (snapshot) =>
+    callback(
+      snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }))
+    )
+  );
+export const onProductsLoad = (callback) =>
+  onSnapshot(productsCollection, (snapshot) =>
+    callback(
+      snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }))
+    )
+  );
+export const onOrdersLoad = (callback) =>
+  onSnapshot(ordersCollection, (snapshot) =>
+    callback(
+      snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }))
+    )
+  );
+
+// отправка фотографии и получение ее url
+export const uploadProductPhoto = async (file) => {
   const storageRef = ref(storage, `products/${file.name}`);
   await uploadBytes(storageRef, file);
 

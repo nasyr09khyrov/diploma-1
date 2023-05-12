@@ -18,7 +18,7 @@ export default function OrderList() {
       }
 
       return (
-        <div>
+        <div key={productId}>
             <img src={product.picture} alt={product.name} />
           {product.name}: {order.cart[productId]} X {product.price} dollar = {order.cart[productId] * product.price} dollar
         </div>

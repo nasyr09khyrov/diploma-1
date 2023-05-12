@@ -1,4 +1,4 @@
-import { getDocs } from "firebase/firestore/lite";
+import { getDocs } from "firebase/firestore";
 import { NavLink } from "react-router-dom";
 import { categoryCollection } from "../../firebase";
 import { useEffect, useState } from "react";
