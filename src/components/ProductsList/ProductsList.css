@@ -8,6 +8,7 @@
     padding: 20px;
     border-radius: 20px;
     transition: transform 0.3s;
+    margin-top: 20px;
 
 }
 .ProductList .Product:hover {
