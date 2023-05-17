@@ -20,5 +20,26 @@ export default function Footer() {
             <li><a href="#">Privacy Policy</a></li>
           </ul>
         </div>
+        <div className="Footer__column">
+          <h3 className="Footer__column-header">Shop</h3>
+          <ul className="Footer__column-list">
+            <li><a href="#">Women's Clothing</a></li>
+            <li><a href="#">Men's Clothing</a></li>
+            <li><a href="#">Kids' Clothing</a></li>
+          </ul>
+        </div>
+        <div className="Footer__column">
+          <h3 className="Footer__column-header">Follow Us</h3>
+          <ul className="Footer__column-list">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div className="Footer__bottom">
+        <p>© 2023 YourOnlineStore. All rights reserved.</p>
+      </div>
+    </div>
   );
 }
