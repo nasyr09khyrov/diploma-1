@@ -1,0 +1,6 @@
+.DeliveryInfo {
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 350px;
+}
