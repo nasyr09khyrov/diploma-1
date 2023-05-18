@@ -8,7 +8,7 @@ import {
   signInWithPopup,
   signOut,
 } from "firebase/auth";
-import { getStorage, ref, uploadBytes, getDownloadURL, getStream } from "firebase/storage";
+import { getStorage, ref, uploadBytes, getDownloadURL, } from "firebase/storage";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
