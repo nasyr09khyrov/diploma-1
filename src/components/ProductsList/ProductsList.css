@@ -16,7 +16,13 @@
 .ProductList .Product img {
     width: 100%;
 }
-div.ProductList {
+div .ProductList {
     display: flex;
     flex-wrap: wrap;
+}
+.Product img {
+    padding-bottom: 15px;
+}
+.Product span {
+    padding-bottom: 5px;
 }
