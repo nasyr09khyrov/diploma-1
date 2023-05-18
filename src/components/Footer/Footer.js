@@ -43,7 +43,7 @@ export default function Footer() {
           </div>  
         </div>
       </div>
-      <div className="Footer-bottom">
+      <div className="footer-bottom">
         <p>© 2023 YourOnlineStore. All rights reserved.</p>
       </div>
     </div>
