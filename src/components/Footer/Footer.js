@@ -19,7 +19,27 @@ export default function Footer() {
               <li className="footer-contact-item">Email: hyrovn@gmail.com</li> 
               <li className="footer-contact-item">Address: 11, Zhambulskaya, Karakol City</li> 
             </ul> 
-          </div> 
+          </div>
+          <div className="footer-section"> 
+            <h3 className="footer-title">Follow Us</h3> 
+            <ul className="footer-social-list"> 
+              <li className="footer-social-item"> 
+                <a href="https://www.facebook.com/profile.php?id=100092558540976" target="_blank" rel="noopener noreferrer"> 
+                  <i className="fab fa-facebook"></i> 
+                </a> 
+              </li> 
+              <li className="footer-social-item"> 
+                <a href="https://www.instagram.com/n.02khyrov" target="_blank" rel="noopener noreferrer"> 
+                  <i className="fab fa-instagram"></i> 
+                </a> 
+              </li> 
+              <li className="footer-social-item"> 
+                <a href="https://twitter.com/hyrovn" target="_blank" rel="noopener noreferrer"> 
+                  <i className="fab fa-twitter"></i> 
+                </a> 
+              </li> 
+            </ul> 
+          </div>  
         </div>
       </div>
       <div className="Footer__bottom">
