@@ -1,5 +1,5 @@
 import Nav from "../Nav/Nav";
-import Logo from "../iu/Logo/Logo";
+import Logo from "../ui/Logo/Logo"
 import "./Drawer.css"
 
 function Drawer({ open, toggle }) {
