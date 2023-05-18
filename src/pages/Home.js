@@ -1,7 +1,7 @@
-import "../assets/ski-photo.jpg"
+import HomeContent from "../components/HomeContent/HomeContent";
+
 export default function Home () {
     return (
-        <div className="Home">
-        </div>
+        <HomeContent />
     );
 }
