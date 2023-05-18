@@ -7,7 +7,7 @@ import Auth from "../Auth/Auth";
 import { useState } from "react";
 import NavToggle from "../NavToggle/NavToggle";
 import Drawer from "../Drawer/Drawer";
-import Footer from "../Footer/Footer";
+import Footer from "../Footer/Footer"
 
 export default function Layout(props) {
   const [drawerOpen, setDrawerOpen] = useState(false);
