@@ -26,3 +26,16 @@ div .ProductList {
 .Product span {
     padding-bottom: 5px;
 }
+.Category h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.Product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  max-width: 300px;
+}
