@@ -48,3 +48,7 @@ div .ProductList {
   text-align: center;
   height: 60px;
 }
+.Product a:hover {
+  color: #ff0000;
+  transition: all 0.3s;
+}
