@@ -1,7 +1,7 @@
+import ContactsInfo from "../components/ContactsInfo/ContactsInfo";
+
 export default function Contacts () {
     return (
-        <div className="Contacts">
-            <h1>CONTACTS</h1>
-        </div>
+            <ContactsInfo />
     );
 }
