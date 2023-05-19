@@ -14,7 +14,7 @@
     transform: scale(1.1);
 }
 .ProductList .Product img {
-    width: 100%;
+    width: 200px;
 }
 div .ProductList {
     display: flex;
@@ -37,7 +37,6 @@ div .ProductList {
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
-  max-width: 320px;
 }
 .Product a {
   font-size: 1.0rem;
