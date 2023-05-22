@@ -1,32 +1,20 @@
-import { getDocs } from "firebase/firestore";
 import { NavLink } from "react-router-dom";
-import { categoryCollection } from "../../firebase";
-import { useEffect, useState } from "react";
 import "./CategoryList.css";
+import DeleteCategory from "../DeleteCategory/DeleteCategory";
+import AddCategory from "../AddCategory/AddCategory";
+import { useContext } from "react";
+import { AppContext } from "../../App";
 
 export default function CategoryList() {
-  const [categoryList, setCategoryList] = useState([]);
+  const { categories } = useContext(AppContext);
 
-  // получить документы из списка категорий в Firebase.
-  useEffect(() => {
-    getDocs(categoryCollection).then(snapshot => {
-      const newCategoryList = [];
-      snapshot.docs.forEach(doc => {
-        const category = doc.data(); // { name: "...", slug: "..." }
-        category.id = doc.id;
-  
-        newCategoryList.push(category);
-      })
-  
-      setCategoryList(newCategoryList);
-    });
-  }, []);
-
-  const output = categoryList.map(category => (
+  const output = categories.map((category) => (
     <li key={category.id}>
       <NavLink to={`/categories/${category.slug}`}>
         {category.name}
       </NavLink>
+
+      <DeleteCategory category={category} />
     </li>
   ));
 
@@ -34,6 +22,7 @@ export default function CategoryList() {
     <div className="CategoryList">
       <h3>Categories</h3>
       <ul>{output}</ul>
+      <AddCategory />
     </div>
   );
 }
