@@ -1,0 +1,35 @@
+.AboutInfo {
+    background-image: url(../../assets/ski-photo.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+    color: #fff;
+  }
+  
+  h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  p:last-child {
+    margin-bottom: 0;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
