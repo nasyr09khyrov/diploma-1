@@ -51,12 +51,6 @@
       display: none;
     }
   }
-  h1{
-    margin-left: 15px;
-  }
-  .Home {
-    margin-left: 15px;
-  }
   @media (max-width: 765px) {
     .Layout header {
         display: flex;
