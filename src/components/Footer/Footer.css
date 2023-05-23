@@ -84,3 +84,11 @@
   .footer-social-item {
     font-size: 2em;
   }
+  .svg-icon {
+    display: inline-block;
+    margin-right: 15px;
+    border-radius: 15px;
+    padding: 10px 15px 10px ;
+    margin-top: 10px;
+    background-color: #33333327;
+  }
