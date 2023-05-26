@@ -1,6 +1,11 @@
-.photo {
-    width: 1000px;
-    border-radius: 15px;
-    display: block;
-    margin: 0 auto;
-}
+.Home {
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .Home .box-2 {
+    background-color: rgba(199, 199, 199, 0.632);
+    padding: 50px 20px;
+    border-radius: 20px;
+    margin: 26px 0 28px 0;
+    text-align: center;
+  }
