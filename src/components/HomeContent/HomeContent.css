@@ -9,3 +9,15 @@
     margin: 26px 0 28px 0;
     text-align: center;
   }
+  .Home .dop-product {
+    width: 98%;
+    border-radius: 20px;
+    transition: 200ms linear;
+  }
+  .Home .product-Home {
+    display: flex;
+  }
+  .Home .product-Home .cush-3 {
+    display: flex;
+    justify-content: flex-end;
+  }
