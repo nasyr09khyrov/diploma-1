@@ -12,6 +12,9 @@
     cursor: pointer; 
     border-radius: 6px;
     transition: background-color 0.3s ease-in-out; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
   }
   .Auth span a {
     color: #0074d9;
