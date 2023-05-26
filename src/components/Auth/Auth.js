@@ -16,7 +16,6 @@ export default function Auth() {
         </span>
       ) : (
         <span>
-          Hello guest!
           <button className="log" onClick={logIn}>Sign in</button>
         </span>
       )}
