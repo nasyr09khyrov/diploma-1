@@ -1,7 +1,4 @@
 import "./HomeContent.css";
-import video_1 from "../../video/video-1.mp4";
-import cushioned from "../../image/cushioned.jpg";
-import cushioned3 from "../../image/cushioned-3.jpg";
 import React from "react";
 import { NavLink } from "react-router-dom";
 
@@ -10,7 +7,6 @@ export default function HomeContent() {
     <div className="Home">
       <div className="video">
         <video autoPlay muted loop>
-          <source src={video_1} type="video/mp4" />
         </video>
 
         <div className="header-text">
@@ -20,18 +16,15 @@ export default function HomeContent() {
       </div>
 
       <div className="box-2">
-        <h1>Furniture salon "Dosbol"</h1>
+        <h1>the ski site was written "Nasyr"</h1>
         <p>
-          We are your reliable partner in a cozy and stylish environment. In our
-          store you will find a wide selection of quality furniture for all
-          areas of your home or office.
+          We are your reliable partner. In our
+          store you will find a wide selection of high-quality skis of all
+          sizes.
         </p>
         <p>
-          Our goal is to help you realize your dreams of the perfect space. We
-          offer a variety of styles and designs to suit different tastes and
-          preferences. Whether you are looking for modern minimalist furniture,
-          classic elegant style or something unique and original, we have what
-          you need.
+          At our ski gear shop, we prioritize customer satisfaction above all else. We strive to create a welcoming and friendly atmosphere where skiers of all ages and abilities can find everything they need to pursue their passion for the sport. Whether you're a first-time skier or a seasoned pro, we're here to fulfill your skiing dreams and make your visit to our store an unforgettable one.
+
         </p>
       </div>
       <div className="product-Home">
@@ -39,21 +32,6 @@ export default function HomeContent() {
           className="product-a cush-1"
           to="/products/willow-ii-slipcovered-bench-queen-sleeper-sofa"
         >
-          <img
-            className="cushioned dop-product"
-            src={cushioned}
-            alt="cushioned"
-          />
-        </NavLink>
-        <NavLink
-          className="product-a cush-3"
-          to="/products/hague-mid-century-sofa"
-        >
-          <img
-            className="cushioned-3 dop-product"
-            src={cushioned3}
-            alt="cushioned-3"
-          />
         </NavLink>
       </div>
     </div>
