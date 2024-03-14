@@ -16,7 +16,7 @@ export default function HomeContent() {
       </div>
 
       <div className="box-2">
-        <h1>the ski site was written "Nasyr"</h1>
+        <h1>the ski sity was written "Daniil"</h1>
         <p>
           We are your reliable partner. In our
           store you will find a wide selection of high-quality skis of all
