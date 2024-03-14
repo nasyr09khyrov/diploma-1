@@ -16,9 +16,9 @@ export default function Footer() {
           <div className="footer-section"> 
             <h3 className="footer-title">Contact Us</h3> 
             <ul className="footer-contact-list"> 
-              <li className="footer-contact-item">Phone: +996 700-549-530</li> 
-              <li className="footer-contact-item">Email: hyrovn@gmail.com</li> 
-              <li className="footer-contact-item">Address: 11, Zhambulskaya, Karakol City</li> 
+              <li className="footer-contact-item">Phone: +996 552 455 344</li> 
+              <li className="footer-contact-item">Email: danikbarbarik@gmail.com</li> 
+              <li className="footer-contact-item">Address: 77, Gebze, Karakol City</li> 
             </ul> 
           </div>
           <div className="footer-section"> 
